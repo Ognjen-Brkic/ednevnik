@@ -150,14 +150,14 @@ namespace ednevnik
             string naredba = "delete from osoba where id =" + txt_id.Text;
             SqlConnection veza = konekcija.connect();
             SqlCommand komanda = new SqlCommand(naredba, veza);
-            Boolean brisano = false;
+            Boolean brisano=false;  
             try
               
             {
                 veza.Open();
                 komanda.ExecuteNonQuery();
                 veza.Close();
-                brisano = true;
+                brisano=true;
             }
             catch (Exception greska)
             {
