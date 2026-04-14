@@ -46,5 +46,22 @@ namespace ednevnik
             sifarnik frm_sifarnik = new sifarnik("osoba");
             frm_sifarnik.Show();
         }
+
+        private void glavna_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void glavna_Load(object sender, EventArgs e)
+        {
+            string user = Program.user_ime + " " + Program.user_prezime;
+            label1.Text = user;
+        }
+
+        private void raspodelaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            raspodela frm_raspodela = new raspodela();
+            frm_raspodela.Show();
+        }
     }
 }
